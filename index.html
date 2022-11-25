@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Marosak</title>
+		<link rel="icon" type="image/x-icon" href="icon.jpg">
 		<style>
 			body {margin: 0;
 				background-color: black;}
@@ -59,16 +60,18 @@
 
 			const geometry = new THREE.TorusGeometry(7, 3, 8, 50);
 			const material = new THREE.MeshBasicMaterial( { color: 0x00000ff, wireframe: true } );
-			const cube = new THREE.Mesh( geometry, material );
-			scene.add( cube );
+			const torus = new THREE.Mesh( geometry, material );
+			scene.add( torus );
 
-			camera.position.z = 5;
+			camera.position.z = 20;
 
 			function animate() {
 				requestAnimationFrame( animate );
 
-				cube.rotation.x += 0.01;
-				cube.rotation.y += 0.01;
+				torus.rotation.x += 0.01;
+				torus.rotation.y += 0.005;
+				torus.rotation.z  += 0.01;
+
 
 				renderer.render( scene, camera );
 			};
