@@ -17,7 +17,7 @@ nav{
     align-items: center;
     padding: 20px 8%;
 }
-nav .menu-img {
+ .menu-img {
     width: 25px;
     margin-right: 20px;
     cursor: pointer;
@@ -48,16 +48,17 @@ button {
     border-radius: 60px;
     border: 0;
     outline: 0;
+    cursor:pointer;
 }
 .cube-img {
     position: absolute;
-    top: 0;
+    top: 1;
     left: 22%;
 }
 .menu-img {
-    width: 50%;
-    margin-top: 15%;
-    margin-left: 57%;
+    width: 51%;
+    margin-top: 7%;
+    margin-left: 56%;
     border-radius: 60px;
 }
 .text-container {
