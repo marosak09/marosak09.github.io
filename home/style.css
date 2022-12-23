@@ -1,76 +1,80 @@
-body {
-    background-color: rgb(20, 20, 20);
+*{
     margin: 0;
+    padding: 0;
+    font-family: "poppins", sans-serif;
+    box-sizing: border-box;
 }
 
-#menu {
-    height: 100vh;
+.hero {
+    background: #1d2026;
+    min-height: 100vh;
+    width: 100%;
+    color: #fff;
+    position: relative;
+}
+nav{
     display: flex;
     align-items: center;
+    padding: 20px 8%;
 }
-
-.menu-item {
-    color: rgb(255, 255, 255);
-    text-shadow: 0 0 10px #00b3ff;
-    font-size: clamp(3rem, 8vw, 8rem);
-    font-family: "Ibarra Real Nova", serif;
-
-    display: block;
+nav .menu-img {
+    width: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+nav .logo {
+    width: 70px;
+    cursor: pointer;
+}
+nav ul {
+    flex: 1;
+    margin-left: 60%;
+    text-align: right;
+}
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+    list-style: none;
+}
+nav ul li a {
     text-decoration: none;
-    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
-    transition: opacity 400ms ease;
+    color: #fff;
 }
-
-#menu-items {
-    margin-left: clamp(4rem, 20vw, 48rem);
-    position: relative;
-    z-index: 2;
+button {
+    background: #efefef;
+    margin-left: 20px;
+    height: 30px;
+    width: 60px;
+    border-radius: 60px;
+    border: 0;
+    outline: 0;
 }
-
-#menu-items:hover > .menu-item {
-    opacity: 0.3;
-}
-
-#menu-items:hover > .menu-item:hover {
-    opacity: 1;
-}
-
-#menu-background-pattern {
-    height: 100vh;
-    width: 100vh;
-
-    background-image: radial-gradient(
-        rgba(2255, 255, 255, 0.1) 9%,
-        transparent 9%
-    );
-    background-position: 0% 0%;
-    background-size: 12vmin 12vmin;
-
+.cube-img {
     position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: 1;
-
-    transition: opacity 800ms ease,
-    background-size 800ms ease;
+    top: 0;
+    left: 22%;
 }
-
-#menu-items:hover ~ #menu-background-pattern {
-    background-size: 11vmin 11vmin;
-    opacity: 0.5;
+.menu-img {
+    width: 50%;
+    margin-top: 15%;
+    margin-left: 57%;
+    border-radius: 60px;
 }
-
-#menu-background-image {
-    height: 100%;
-    width: 100%;
-
-    background-image: url("https://img.freepik.com/free-vector/blue-neon-frame-dark-background_53876-113902.jpg");
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: 0;
-    background-position: center 40%;
-    background-size: 110vmax;
-    opacity: 0.15;
+.text-container {
+    max-width: 600px;
+    margin-top: 11%;
+    margin-left: 10%;
 }
-
+.text-container h1 {
+    font-size: 80px;
+}
+.text-container a {
+    text-decoration: none;
+    padding: 14px 40px;
+    background: #fff;
+    display: inline-block;
+    border-radius: 60px;
+    font-size: 18px;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
