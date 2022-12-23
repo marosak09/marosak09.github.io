@@ -69,13 +69,17 @@ button {
 .text-container h1 {
     font-size: 80px;
 }
+.text-container p {
+    margin-top: 10px;
+    font-size: 20px;
+}
 .text-container a {
     text-decoration: none;
     padding: 14px 40px;
     background: #fff;
     display: inline-block;
     border-radius: 60px;
-    font-size: 18px;
+    font-size: 25px;
     justify-content: flex-end;
     margin-top: 20px;
 }
