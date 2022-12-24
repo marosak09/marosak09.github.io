@@ -18,11 +18,11 @@ var config = {
   var timestamp = Date.now();
   var user = firebase.auth().currentUser;
 
-  if (user) {
-  // Uživatel je přihlášen, může přistupovat k chatu
-  // ...
+  if (sessionStorage.getItem("firebase_user")) {
+    // Uživatel je přihlášen, může přistupovat k chatu
+    // ...
   } else {
-  // Uživatel není přihlášen, přesměrujeme ho na přihlašovací stránku
+    // Uživatel není přihlášen, přesměrujeme ho na přihlašovací stránku
     window.location.href = "https://marosak09.github.io/login/";
   }
   
