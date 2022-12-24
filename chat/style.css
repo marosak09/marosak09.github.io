@@ -1,0 +1,19 @@
+* {
+  background-color: #36393e;
+  color: white;
+  font-family: sans-serif;
+}
+ form input {
+  border-radius: 40px;
+  border: none;
+  background-color: #474b52;
+  margin-top: 10px;
+  margin-left: 400px;
+  width: 50%;
+  height: 30px;
+  text-align: center;
+}
+h5 {
+  text-decoration: none;
+  font-size: medium;
+}
