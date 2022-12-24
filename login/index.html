@@ -4,21 +4,33 @@
   <meta charset="utf-8">
   <title>Login</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <link rel="icon" type="image/x-icon" href="src/favicon.png">
 </head>
 <body>
-
-
-  <form>
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email"><br>
-    <label for="password">Password:</label><br>
-    <input type="password" id="password" name="password"><br><br>
-    <button id="submit" type="submit">Login</button>
- 
-    <img src="bg-image.png">
-  </form>
-  <h1>Don't have account <a href="https://marosak09.github.io/register">create new</a></h1>
+  <div class="flex-container">
+    <div class="content-container">
+      <div class="form-container">
+        <form action="https://marosak09.github.io/chat">
+          <h1>
+            Login
+          </h1>
+          <br>
+          <br>
+          <span class="subtitle">EMAIL:</span>
+          <br>
+          <input type="email" id="email" name="email">
+          <br> 
+          <span class="subtitle">PASSWORD:</span>
+          <br>
+          <input type="password" name="password" id="password">
+          <br><br>
+          
+          <input type="submit" value="SUBMIT" class="submit-btn" id="submit">
+          
+        </form>
+      </div>
+    </div>
+  </div>
 
   <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
