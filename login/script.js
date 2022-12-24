@@ -26,7 +26,7 @@ submit.addEventListener("click", (e) => {
   firebase.auth().signInWithEmailAndPassword(email.value, password.value)
     .then((userCredential) => {
       // Přihlášení úspěšné
-      alert("Login sucsess");
+      window.location.href = "https://marosak09.github.io/chat/";
       // ...
     })
     .catch((error) => {
