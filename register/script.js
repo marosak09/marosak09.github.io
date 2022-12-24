@@ -34,7 +34,7 @@ const firebaseConfig = {
         .then(() => {
 
         // Úprava přezdívky úspěšná
-        alert("Account created successfully");
+        window.location.href = "https://marosak09.github.io/chat/";
         // ...
         })
         .catch((error) => {
