@@ -26,6 +26,7 @@ submit.addEventListener("click", (e) => {
   firebase.auth().signInWithEmailAndPassword(email.value, password.value)
     .then((userCredential) => {
       // Přihlášení úspěšné
+      sessionStorage.setItem("firebase_user", JSON.stringify(userCredential));
       window.location.href = "https://marosak09.github.io/chat/";
       // ...
     })
