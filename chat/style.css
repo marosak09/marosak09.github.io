@@ -1,19 +1,31 @@
 * {
-  background-color: #36393e;
-  color: white;
-  font-family: sans-serif;
-}
- form input {
-  border-radius: 40px;
-  border: none;
-  background-color: #474b52;
-  margin-top: 10px;
-  margin-left: 400px;
-  width: 50%;
-  height: 30px;
-  text-align: center;
-}
-h5 {
-  text-decoration: none;
-  font-size: medium;
-}
+    background-color: #36393e;
+    color: white;
+    font-family: sans-serif;
+  }
+   form input {
+    border-radius: 40px;
+    border: none;
+    background-color: #474b52;
+    margin-top: 10px;
+    margin-left: 400px;
+    width: 50%;
+    height: 30px;
+    text-align: center;
+  }
+  h5 {
+    text-decoration: none;
+    font-size: medium;
+  }
+
+  #messages {
+    overflow: auto;
+    height: 80%; /* zadejte požadovanou výšku seznamu zpráv */
+    margin: 0; /* odstraňte okraje */
+  }
+  
+  form {
+    position: fixed; /* zajistí, že formulář bude vždy na stejném místě */
+    bottom: 0; /* formulář bude umístěn na dolní straně stránky */
+    width: 100%; /* formulář bude široký jako stránka */
+  }
