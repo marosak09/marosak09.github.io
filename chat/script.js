@@ -17,6 +17,13 @@ var config = {
   var form = document.getElementById("form");
   var timestamp = Date.now();
   var user = firebase.auth().currentUser;
+
+  if (sessionStorage.getItem("firebase_user")) {
+    // Uživatel je přihlášen, může přistupovat k chatu
+    // ...
+  } else {
+    window.location.href = "https://marosak09.github.io/login"
+  }
   
   // Obsluha odeslání formuláře
   form.addEventListener("submit", (e) => {
