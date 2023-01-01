@@ -17,14 +17,6 @@ var config = {
   var form = document.getElementById("form");
   var timestamp = Date.now();
   var user = firebase.auth().currentUser;
-
-  if (sessionStorage.getItem("firebase_user")) {
-    // Uživatel je přihlášen, může přistupovat k chatu
-    // ...
-  } else {
-    // Uživatel není přihlášen, přesměrujeme ho na přihlašovací stránku
-    window.location.href = "https://marosak09.github.io/login/";
-  }
   
   // Obsluha odeslání formuláře
   form.addEventListener("submit", (e) => {
@@ -56,6 +48,7 @@ var config = {
     for (var key in data) {
       var li = document.createElement("li");
       li.innerText = data[key].message;
+      li.innerText = `${snapshot.val().nickname}: ${data[key].message}`;
       messages.appendChild(li);
     }
   });
