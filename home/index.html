@@ -1,29 +1,86 @@
 <!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <title>Marosak</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+	<meta http-equiv="content-type"
+		content="text/html; charset=UTF-8">
+
+	<meta name="viewport" content="width=device-width,
+		minimum-scale=1,initial-scale=1">
+
+	<script src=
+		"https://code.jquery.com/jquery-3.3.1.min.js">
+	</script>
+
+	<script src=
+"https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js">
+	</script>
+
+	<link rel="stylesheet" href=
+"https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css" />
+
+	<style type="text/css">
+		.terminal,
+		span,
+		.cmd,
+		div {
+			--color: rgba(255, 255, 255, 0.99);
+		}
+
+		.terminal,
+		span {
+			--size: 1.4;
+		}
+	</style>
+    <template id="greetings">
+        ███▄ ▄███▓ ▄▄▄       ██▀███   ▒█████    ██████  ▄▄▄       ██ ▄█▀
+        ▓██▒▀█▀ ██▒▒████▄    ▓██ ▒ ██▒▒██▒  ██▒▒██    ▒ ▒████▄     ██▄█▒ 
+        ▓██    ▓██░▒██  ▀█▄  ▓██ ░▄█ ▒▒██░  ██▒░ ▓██▄   ▒██  ▀█▄  ▓███▄░ 
+        ▒██    ▒██ ░██▄▄▄▄██ ▒██▀▀█▄  ▒██   ██░  ▒   ██▒░██▄▄▄▄██ ▓██ █▄ 
+        ▒██▒   ░██▒ ▓█   ▓██▒░██▓ ▒██▒░ ████▓▒░▒██████▒▒ ▓█   ▓██▒▒██▒ █▄
+        ░ ▒░   ░  ░ ▒▒   ▓▒█░░ ▒▓ ░▒▓░░ ▒░▒░▒░ ▒ ▒▓▒ ▒ ░ ▒▒   ▓▒█░▒ ▒▒ ▓▒
+        ░  ░      ░  ▒   ▒▒ ░  ░▒ ░ ▒░  ░ ▒ ▒░ ░ ░▒  ░ ░  ▒   ▒▒ ░░ ░▒ ▒░
+        ░      ░     ░   ▒     ░░   ░ ░ ░ ░ ▒  ░  ░  ░    ░   ▒   ░ ░░ ░ 
+               ░         ░  ░   ░         ░ ░        ░        ░  ░░  ░   
+                        welcome on my website type help
+                                                                         
+       </template>
 </head>
+
 <body>
-    <div class="hero">
-        <nav>
-            <ul>
-                <li><a href="https://github.com/marosak09">Github</a></li>
-                <li><a href="https://www.youtube.com/@marosak8056">YouTube</a></li>
-            </ul>
-            <a href="https://marosak09.github.io/home">
-                <button type="button">Home</button>
-            </a>
-        </nav>  
-        <div class="cube-img">
-            <img src="bg-image.png" class="menu-img">
-        </div>
-        <div class="text-container">
-            <h1>Marosak</h1>
-            <p>Ahoj já jsem Marosak a tohle je moje web stránka na které můžeš najít informace o mně. </p>
-            <a href="https://marosak09.github.io/register/">About</a>
-        </div>
-    </div>
-    
+	<script>
+		$('body').terminal({
+			socials: function () {
+                this.echo("Discord: Marosak#1867\n"
+                + "Github: Marosak09");
+			},
+			creator: function () {
+				this.echo('Marosak');
+			},
+			help: function () {
+				this.echo('help:\n'
+                + ' \n'
+				+ 'creator\n'
+				+ 'socials\n'
+                + 'about\n'
+                + 'projects\n'
+                + 'clear');
+			},
+            projects: function () {
+                this.echo('Projects: \n'
+                + 'type socials and check my GitHub with all projects');
+            },
+            about: function() {
+                this.echo('About:\n'
+                + 'Hello my Name is Marian and i am 14 years old\n'
+                + 'I like programming and i can code in Java Javascript Html css and python.\n'
+                + 'I am interested in Penetration testing and hacking and if you want to check my projects you can visit my github with socials command');
+            }
+		}, {
+			greetings: greetings.innerHTML
+		});
+	</script>
 </body>
+
 </html>
